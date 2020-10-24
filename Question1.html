@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            background-color: khaki;
+             text-align:center;
+             font-size: 20;
+             padding:20;
+        }
+    </style>
+    <script>
+ function ShowDetails()
+ {
+ let name=document.getElementById("userName").value;
+    let date=document.getElementById("date").value;
+    let hobby=document.getElementById("option").value;
+    let status=document.getElementById("status").value;
+   
+ 
+    let text = `<h1>The UserName is: ${name}</h1><p>With DOB:${date}</p><h1>having hobby as:${hobby}<h1>is:${status}`;
+    document.getElementById("printText").innerHTML = text;
+ 
+}
+    </script>
+</head>
+<body>
+    <h1>User registration Form</h1>
+    <form>
+<p> Enter name:<input type="text" id="userName"></p>   
+<p>Enter Date of Birth:<input type="date" id="date"></p>
+<p>
+    Select the hobby:
+    <select id="option">
+        <option >---Choose Hobby---</option>
+        <option >Cricket</option>
+        <option >Tennis</option>
+        <option >badminton</option>
+        <option >football</option>
+    </select>
+</p>
+<p>
+    Marital Status: <input type="radio" id="status" value="Single" name="status1">Single<input type="radio" id="status" value="Married" name="status2">Married
+</p> 
+<p><button type="button" onclick="ShowDetails()">submit</button></p>
+</form>
+ 
+<div id="printText">
+ 
+</div>
+ 
+</body>
+</html>

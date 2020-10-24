@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            background-color: cornsilk;
+             text-align:center;
+        }
+    </style>
+    <script>
+ function ShowDetails()
+{
+    let name=document.getElementById("userName").value;
+    let date=document.getElementById("date").value;
+    let hobby=document.getElementById("option").value;
+   
+ 
+    let text = `<h1>The UserName is: ${name}</h1><p>of DOB:${date}</p><h1>have hobby:${hobby}<h1><h1>the gender:${gen}</h1>`;
+    document.getElementById("printText").innerHTML = text;
+ 
+ 
+}
+    </script>
+</head>
+<body>
+    <form>
+<p> Enter name:<input type="text" id="userName"></p>   
+<p>Enter Date of Birth:<input type="date" id="date"></p>
+<p>
+    Select the state:
+    <select id="option">
+        <option >---Choose hobby---</option>
+        <option >cricket</option>
+        <option >football</option>
+        <option >tennis</option>
+        <option >tennis</option>
+    </select>
+</p>
+<p>
+    Select Gender:
+    <input type="radio" name="gender">Male
+    <input type="radio" name="gender">Female
+</p>
+<p><button type="button" onclick="ShowDetails()">submit</button>
+</form>
+ 
+<div id="printText">
+ 
+</div>
+ 
+</body>
+</html>
